@@ -7,10 +7,10 @@ public class Area {
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
         System.out.println("Enter a radius : ");
         String radius = myObj.nextLine();  // Read user input
+
         boolean invalidEntry = true;
         while(invalidEntry){
-
-            if(radius.trim() == "" || !radius.matches("[0-9]+") ){
+            if(radius.trim() == "" || !radius.matches("[0-9.]+") ){
                 System.out.println(" Invalid entry");
                 invalidEntry = true;
                 //radius = myObj.nextLine();
@@ -20,8 +20,6 @@ public class Area {
                 invalidEntry = false;
             }
         }
-
-
             double r = new Double(radius);
             System.out.println("The area of a circle of radius " + radius + " is : " + Circle.getArea(r));
 
